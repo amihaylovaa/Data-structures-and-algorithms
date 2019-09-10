@@ -74,7 +74,7 @@ StyleCopReport.xml
 *.pgd
 *.rsp
 *.sbr
-*.sln
+.sln
 *.tlb
 *.tli
 *.tlh
@@ -89,9 +89,9 @@ StyleCopReport.xml
 *.svclog
 *.scc
 .gitattributes
-*.vcxproj
-*.vcxproj.user
-*.vcxproj.filters
+.vcxproj
+.vcxproj.user
+.vcxproj.filters
 
 
 
