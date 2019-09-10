@@ -48,12 +48,10 @@ void singly_linked_list()
 			printf("Enter searched value:");
 			scanf_s("%d", &search_value);
 
-			search_result = find_node(head, search_value);
-
-			if (search_result == NULL)
-				printf("\nNode with value %d does not exist!", search_value);
+			if (find_node(head, search_value) == NULL)
+				printf("\nNode with value %d does not exist", search_value);
 			else
-				printf("\nValue found - %d !", search_result->key);
+				printf("\nNode with value %d found - %d", search_value);
 		}
 
 		else if (choice == 3)
@@ -67,6 +65,7 @@ void singly_linked_list()
 
 			insert(&head, new_node);
 		}
+
 		else if (choice == 4)
 		{
 			LIST* delete_node;
@@ -100,8 +99,8 @@ void add(LIST** head, int key_value)
 
 	else
 	{
-		for (node_ptr = *head; node_ptr->next != NULL; node_ptr = node_ptr->next);
-
+		for (node_ptr = *head; node_ptr->next != NULL; node_ptr = node_ptr->next)
+			;
 		node_ptr->next = new_node;
 		node_ptr = new_node;
 		new_node->next = node_ptr->next = NULL;
@@ -112,10 +111,12 @@ LIST* find_node(LIST* head, int key_value)
 {
 	LIST* node_ptr;
 
-	for (node_ptr = head; node_ptr != NULL && node_ptr->key != key_value; node_ptr = node_ptr->next);
+	for (node_ptr = head; node_ptr != NULL && node_ptr->key != key_value; node_ptr = node_ptr->next)
+		;
 	return node_ptr;
 }
 
+// inserts if elements are sorted in ascending order
 void insert(LIST** head, LIST* new_node)
 {
 	LIST* node_ptr;

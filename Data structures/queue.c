@@ -18,7 +18,7 @@ void pop_queue(QUEUE**);
 void queue()
 {
 	QUEUE* head = NULL, * tail = NULL;
-	int choice;
+	int choice = 0;
 
 	while (1)
 	{
@@ -27,7 +27,7 @@ void queue()
 		printf("\nEnter 2 to traverse");
 		printf("\nEnter 3 to check if queue is empty");
 		printf("\nEnter 4 to pop");
-		printf("\nEnter 5 for exit");
+		printf("\nEnter 0 for exit");
 		scanf_s("%d", &choice);
 
 		if (choice == 1)

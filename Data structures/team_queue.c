@@ -30,7 +30,7 @@ void team_queue()
 		printf("\nPress 1 to push");
 		printf("\nPress 2 to pop");
 		printf("\nPress 3 to traverse");
-		printf("\nPress 4 for exit");
+		printf("\nPress 0 for exit");
 		scanf_s("%d", &choice);
 
 
@@ -50,7 +50,7 @@ void team_queue()
 		else if (choice == 3)
 			traverse_team_queue(&head);
 		else
-			return 1;
+			return;
 	}
 }
 

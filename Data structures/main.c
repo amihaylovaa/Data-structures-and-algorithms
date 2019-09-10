@@ -7,11 +7,11 @@ void team_queue();
 void singly_linked_list();
 void doubly_linked_list();
 
-int main()
+void main()
 {
 	int choice = 0;
 
-	while (choice != 8)
+	while (1)
 	{
 		printf("\nPlease, enter your choice");
 		printf("\n1 -> Stack");
@@ -33,5 +33,4 @@ int main()
 		default: exit(1);
 		}
 	}
-	return 0;
 }

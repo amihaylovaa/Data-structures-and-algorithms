@@ -21,16 +21,15 @@ void priority_queue()
 {
 	struct queue* priority_queue = NULL;
 	struct data queue_data;
-
 	int choice = 0;
 
-	while (choice != 4)
+	while (1)
 	{
 		printf("\nPriority queue");
 		printf("\nPress 1 for push ");
 		printf("\nPress 2 for pop ");
 		printf("\nPress 3 for print ");
-		printf("\nPress 4 for exit ");
+		printf("\nPress 0 for exit ");
 		scanf_s("%d", &choice);
 
 		if (choice == 1)

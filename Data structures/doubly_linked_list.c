@@ -20,7 +20,7 @@ void delete_node(LIST**, int);
 void doubly_linked_list()
 {
 	LIST* head = NULL;
-	int choice;
+	int choice = 0;
 
 	while (1)
 	{
@@ -30,9 +30,8 @@ void doubly_linked_list()
 		printf("\n3 -> Insert a new node");
 		printf("\n4 -> Delete a node by value");
 		printf("\n5 -> Traverse the list");
-		printf("\n6 -> Exit");
+		printf("\n0 -> Exit");
 		scanf_s("%d", &choice);
-
 
 		if (choice == 1)
 		{
@@ -47,15 +46,13 @@ void doubly_linked_list()
 		else if (choice == 2)
 		{
 			int search_value;
-			LIST* search;
-
+			
 			printf("\nFind node by value");
 			scanf_s("%d", &search_value);
-			search = find_node_by_value(head, search_value);
-			if (search == NULL)
+			if (find_node_by_value(head, search_value) == NULL)
 				printf("\nNode with value %d does not exist", search_value);
 			else
-				printf("\nNode found - %d", search->key);
+				printf("\nNode with value %d found - %d", search_value);
 		}
 
 		else if (choice == 3)
@@ -118,10 +115,12 @@ LIST* find_node_by_value(LIST* head, int val)
 {
 	LIST* node_ptr;
 
-	for (node_ptr = head; node_ptr != NULL && node_ptr->key != val; node_ptr = node_ptr->next);
+	for (node_ptr = head; node_ptr != NULL && node_ptr->key != val; node_ptr = node_ptr->next)
+		;
 	return node_ptr;
-	return NULL;
 }
+
+// inserts if elements are sorted in ascending order
 void insert_node(LIST** head, LIST* new)
 {
 	LIST* list_ptr;
@@ -157,7 +156,8 @@ void insert_node(LIST** head, LIST* new)
 
 void delete_node(LIST** head, int delete_value)
 {
-	LIST* curr_node = NULL, * prev_node = NULL;
+	LIST* curr_node = NULL;
+	LIST* prev_node = NULL;
 
 	if ((*head)->key == delete_value)
 	{
@@ -185,7 +185,8 @@ void delete_node(LIST** head, int delete_value)
 			free(curr_node);
 			curr_node = prev_node->next;
 		}
-		
+
+		// if there is no node with such value
 		else
 			return;
 	}

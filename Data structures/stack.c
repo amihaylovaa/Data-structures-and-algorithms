@@ -29,7 +29,7 @@ void stack()
 		printf("\n3 -> Check if stack is empty");
 		printf("\n4 -> Pop");
 		printf("\n5 -> Traverse");
-		printf("\n6 -> Exit");
+		printf("\n0 -> Exit");
 		scanf_s("%d", &choice);
 
 		if (choice == 1)
@@ -74,7 +74,6 @@ void stack()
 
 		else
 			return;
-
 	}
 }
 
@@ -103,7 +102,7 @@ STACK* peek(STACK* head)
 
 bool is_empty(STACK* h)
 {
-	return (h == NULL) ? true : false;
+	return (peek(h) == NULL) ? true : false;
 }
 
 void pop(STACK** head)
