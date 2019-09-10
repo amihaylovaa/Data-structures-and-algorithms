@@ -1,5 +1,4 @@
-The following project presents some of the basic data structures which I studied during the second year of my bachelor degree.
-
+The following project presents some of the basic data structures.
 
 There you will find :
 1) Singly linked list
@@ -8,3 +7,4 @@ There you will find :
 4) Queue
 5) Team queue
 6) Priority queue
+7) Binary search tree
