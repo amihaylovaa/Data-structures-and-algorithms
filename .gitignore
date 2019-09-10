@@ -74,6 +74,7 @@ StyleCopReport.xml
 *.pgd
 *.rsp
 *.sbr
+*.sln
 *.tlb
 *.tli
 *.tlh
@@ -87,6 +88,12 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
+.gitattributes
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+
+
 
 # Chutzpah Test files
 _Chutzpah*
