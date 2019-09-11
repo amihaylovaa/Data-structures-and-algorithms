@@ -8,3 +8,4 @@ There you will find :
 5) Team queue
 6) Priority queue
 7) Binary search tree
+8) Max heap
